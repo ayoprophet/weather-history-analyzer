@@ -1,4 +1,4 @@
-###C4 -- CREATING SECOND CLASS (SQLite, SQLAlchemy Orm Module) --
+### CREATING SECOND CLASS (SQLite, SQLAlchemy Orm Module) --
 
 from sqlalchemy import create_engine, Column, Integer, String, Float
 from sqlalchemy.orm import declarative_base, sessionmaker
@@ -6,7 +6,7 @@ from sqlalchemy.orm import declarative_base, sessionmaker
 
 base = declarative_base()
 
-#### C4: Creating SQLite table:
+#### Creating SQLite table:
 
 class WeatherRecord(base):
 
@@ -36,7 +36,7 @@ engine = create_engine('sqlite:///secondclass.db')
 base.metadata.drop_all(engine)
 base.metadata.create_all(engine)
 
-####C5 : Inserting database records:
+##Inserting database records:
 
 Session = sessionmaker(bind=engine)
 session = Session()
@@ -66,7 +66,6 @@ def save_weather_data(weather_data):
     session.add(weather_record)
     session.commit()
 
-#### C6 Query the table created in SQLite and retrieve the data
 
 def query_weather_data():
 

@@ -1,6 +1,3 @@
-###### C1
-# Creating a Class to retrieve weather data for a selected event, location and date
-
 import requests
 
 class WeatherData:
@@ -28,7 +25,7 @@ class WeatherData:
         self.temperatures = []
         self.wind_speeds = []
         self.precipitations = []
-##### C2 - Pulling data for the location
+
     def fetch_weather_data(self): #API requests for the selected location and date
 
         for historical_year in self.years:
